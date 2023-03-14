@@ -14,5 +14,7 @@ public class ExemploOrdenacaoMap {
             put(" Duhigg, Charles", new Livro("O poder do hábito", 408));
             put(" Harari, Yuval Noah", new Livro("21 Lições para o século 21", 432));
         }};
+        for (Map.Entry<String, Livro> livro :meusLivros.entrySet())
+        System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
     }
 }
