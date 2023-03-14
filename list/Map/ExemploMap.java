@@ -91,7 +91,7 @@ public class ExemploMap {
         System.out.println("Apague o dicionário de carros" );
         carrosPopulares.clear();
 
-        System.out.println("Confira se o dicionário está vazio: " +carrosPopulares.isEmpty());
+        System.out.println("Confira se o dicionário está vazio: " + carrosPopulares.isEmpty());
 
     }
 }
