@@ -1,11 +1,19 @@
 package list.exceptions;
 
+import javax.swing.*;
 import java.io.*;
 
 public class CheckedExeption {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         String nomeDoArquivo = "harry-potter.txt";
-        imprimirArquivoNoConsole(nomeDoArquivo);
+        try {
+            imprimirArquivoNoConsole(nomeDoArquivo);
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"Revise o nome do arquivo que deseja imprimir " +e.getCause());
+        } finally {
+            System.out.println("Chegou no finally!");
+        }
 
         System.out.println("Apesar da exepcion ou não, o programa continua...");
     }
