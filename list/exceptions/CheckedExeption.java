@@ -8,9 +8,14 @@ public class CheckedExeption {
         String nomeDoArquivo = "harry-potter.txt";
         try {
             imprimirArquivoNoConsole(nomeDoArquivo);
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        } catch (FileNotFoundException e){
+            //e.printStackTrace();
             JOptionPane.showMessageDialog(null,"Revise o nome do arquivo que deseja imprimir " +e.getCause());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado! Entre em contato com o suporte! " +e.getCause());
+            e.printStackTrace();
+
         } finally {
             System.out.println("Chegou no finally!");
         }
